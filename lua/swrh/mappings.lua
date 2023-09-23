@@ -1,0 +1,123 @@
+local M = {}
+
+M.general = {
+  i = {
+    ['<C-h>'] = { '<Left>', 'Move left' },
+    ['<C-l>'] = { '<Right>', 'Move right' },
+    ['<C-j>'] = { '<Down>', 'Move down' },
+    ['<C-k>'] = { '<Up>', 'Move up' },
+
+    ['jk'] = { '<ESC>', 'Escape insert mode', opts = { nowait = true } },
+  },
+
+  n = {
+    ['<C-h>'] = { '<C-w>h', 'Window left' },
+    ['<C-l>'] = { '<C-w>l', 'Window right' },
+    ['<C-j>'] = { '<C-w>j', 'Window down' },
+    ['<C-k>'] = { '<C-w>k', 'Window up' },
+
+    ['<C-\\>'] = { '<Cmd>split<CR>', 'Create a horizontal window' },
+    ['<C-|>'] = { '<Cmd>vsplit<CR>', 'Create a vertical window' },
+
+    ['<C-_>'] = { '<C-w>-', 'Decrease current window height' },
+    ['<C-=>'] = { '<C-w>+', 'Increase current window height' },
+    ['<C-<>'] = { '<C-w><', 'Decrease current window width' },
+    ['<C->>'] = { '<C-w>>', 'Increase current window width' },
+    ['<C-q>'] = { '<Cmd>q<CR>', 'Quit' },
+
+    ['<Leader>tl'] = { '<Cmd>set list!<CR>', 'Toggle list' },
+    ['<Leader>tp'] = { '<Cmd>set paste!<CR>', 'Toggle paste' },
+    ['<Leader>ts'] = { '<Cmd>set spell!<CR>', 'Toggle spell' },
+
+    ['<C-n>'] = { '<Cmd>cnext<CR>', 'QuickList next' },
+    ['<C-p>'] = { '<Cmd>cprevious<CR>', 'QuickList previous' },
+
+    ['<M-k>'] = { '<Cmd>move -2<CR>', 'Move line up' },
+    ['<M-j>'] = { '<Cmd>move +1<CR>', 'Move line down' },
+
+    ['<Leader>ww'] = { '<Cmd>wa<CR>', ':wa' },
+    ['<Leader>wq'] = { '<Cmd>wqa<CR>', ':wqa' },
+  },
+
+  t = {
+    ['<C-x>'] = { vim.api.nvim_replace_termcodes('<C-\\><C-N>', true, true, true), 'Escape terminal mode' },
+  },
+
+  v = {
+    ['<M-k>'] = { ":move '<-2<CR>gv=gv", 'Move line up' },
+    ['<M-j>'] = { ":move '>+1<CR>gv=gv", 'Move line down' },
+
+    ['<Leader>xs'] = { '!sort<CR>gv', 'sort' },
+    ['<Leader>xu'] = { '!uniq<CR>gv', 'uniq' },
+  },
+
+  x = {
+    ['p'] = { 'p:let @+=@0<CR>:let @"=@0<CR>', "Don't copy replaced text", opts = { silent = true } },
+  },
+}
+
+M.lspconfig = {
+  n = {
+    ['<Leader>fm'] = { vim.lsp.buf.format, 'LSP formatting', },
+  },
+}
+
+M.whichkey = {
+  n = {
+    ['<Leader>wk'] = { '<Cmd>WhichKey<CR>', 'Which-key all keymaps' },
+  },
+}
+
+local gitsigns = require('gitsigns')
+
+M.gitsigns = {
+  n = {
+    ['<Leader>hs'] = { gitsigns.stage_hunk, 'Git stage hunk', },
+    ['<Leader>hr'] = { gitsigns.reset_hunk, 'Git reset hunk', },
+    ['<Leader>hp'] = { gitsigns.preview_hunk, 'Git preview hunk', },
+    ['<Leader>hu'] = { gitsigns.undo_stage_hunk, 'Git undo stage hunk', },
+    ['<Leader>hR'] = { gitsigns.reset_buffer, 'Git reset buffer', },
+    ['<Leader>hS'] = { gitsigns.stage_buffer, 'Git stage buffer', },
+    ['<Leader>hd'] = { gitsigns.diffthis, 'Git diff .', },
+    ['<Leader>hD'] = { function() gitsigns.diffthis('~') end, 'Git diff ~', },
+    ['<Leader>hb'] = { gitsigns.blame_line, 'Git blame line', },
+    ['<Leader>hB'] = { function() gitsigns.blame_line({ full = true }) end, 'Git blame line full', },
+    ['<Leader>td'] = { gitsigns.toggle_deleted, 'Toggle Git deleted', },
+    ['<Leader>tb'] = { gitsigns.toggle_current_line_blame, 'Toggle Git blame', },
+  },
+
+  v = {
+    ['<Leader>hs'] = {
+      function()
+        gitsigns.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') })
+      end,
+      'Git stage hunk',
+    },
+
+    ['<Leader>hr'] = {
+      function()
+        gitsigns.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') })
+      end,
+      'Git reset hunk',
+    },
+  },
+}
+
+M.telescope = {
+  n = {
+    ['<Leader>fa'] = { '<Cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>', 'Find all' },
+    ['<Leader>fb'] = { '<Cmd>Telescope buffers<CR>', 'Find buffers' },
+    ['<Leader>ff'] = { '<Cmd>Telescope find_files<CR>', 'Find files' },
+    ['<Leader>fg'] = { '<Cmd>Telescope git_files<CR>', 'Git files' },
+    ['<Leader>fh'] = { '<Cmd>Telescope help_tags<CR>', 'Help page' },
+    ['<Leader>fk'] = { '<Cmd>Telescope marks<CR>', 'Find bookmarks' },
+    ['<Leader>fo'] = { '<Cmd>Telescope oldfiles<CR>', 'Find oldfiles' },
+    ['<Leader>fw'] = { '<Cmd>Telescope live_grep<CR>', 'Live grep' },
+    ['<Leader>fz'] = { '<Cmd>Telescope current_buffer_fuzzy_find<CR>', 'Find in current buffer' },
+
+    ['<Leader>gc'] = { '<Cmd>Telescope git_commits<CR>', 'Git commits' },
+    ['<Leader>gs'] = { '<Cmd>Telescope git_status<CR>', 'Git status' },
+  },
+}
+
+return M
