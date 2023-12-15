@@ -24,6 +24,8 @@ M.load = function()
 
   vim.o.list = true
   vim.o.listchars = 'tab:>.,trail:.,eol:$'
+
+  vim.o.ignorecase = false
 end
 
 return M
