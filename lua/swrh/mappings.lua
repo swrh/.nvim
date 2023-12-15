@@ -32,6 +32,9 @@ M.general = {
     ['<C-n>'] = { '<Cmd>cnext<CR>', 'QuickList next' },
     ['<C-p>'] = { '<Cmd>cprevious<CR>', 'QuickList previous' },
 
+    [']f'] = { '<Cmd>next<CR>', 'Next file' },
+    ['[f'] = { '<Cmd>previous<CR>', 'Previous file' },
+
     ['<M-k>'] = { '<Cmd>move -2<CR>', 'Move line up' },
     ['<M-j>'] = { '<Cmd>move +1<CR>', 'Move line down' },
 
