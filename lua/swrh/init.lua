@@ -21,6 +21,7 @@ M.init = function()
   load_mapping(mappings.whichkey)
   load_mapping(mappings.gitsigns)
   load_mapping(mappings.telescope)
+  load_mapping(mappings.leap)
 end
 
 return M
