@@ -125,6 +125,7 @@ M.telescope = {
     ['<Leader>fh'] = { '<Cmd>Telescope help_tags<CR>', 'Help page' },
     ['<Leader>fk'] = { '<Cmd>Telescope marks<CR>', 'Find bookmarks' },
     ['<Leader>fo'] = { '<Cmd>Telescope oldfiles<CR>', 'Find oldfiles' },
+    ['<Leader>fr'] = { '<Cmd>Telescope resume<CR>', 'Resume (find)' },
     ['<Leader>fw'] = { '<Cmd>Telescope live_grep<CR>', 'Live grep' },
     ['<Leader>fz'] = { '<Cmd>Telescope current_buffer_fuzzy_find<CR>', 'Find in current buffer' },
 
