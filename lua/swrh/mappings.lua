@@ -95,8 +95,8 @@ M.gitsigns = {
       end,
       'Git blame line full',
     },
-    ['<Leader>td'] = { gitsigns.toggle_deleted, 'Toggle Git deleted' },
-    ['<Leader>tb'] = { gitsigns.toggle_current_line_blame, 'Toggle Git blame' },
+    ['<Leader>gd'] = { gitsigns.toggle_deleted, 'Git deleted (toggle)' },
+    ['<Leader>gb'] = { gitsigns.toggle_current_line_blame, 'Git blame (toggle)' },
   },
 
   v = {
