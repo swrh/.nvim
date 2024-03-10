@@ -61,7 +61,7 @@ M.general = {
 
 M.lspconfig = {
   n = {
-    ['<Leader>fm'] = { vim.lsp.buf.format, 'LSP formatting', },
+    ['<Leader>fm'] = { vim.lsp.buf.format, 'LSP formatting' },
   },
 }
 
@@ -71,35 +71,45 @@ M.whichkey = {
   },
 }
 
-local gitsigns = require('gitsigns')
+local gitsigns = require 'gitsigns'
 
 M.gitsigns = {
   n = {
-    ['<Leader>hs'] = { gitsigns.stage_hunk, 'Git stage hunk', },
-    ['<Leader>hr'] = { gitsigns.reset_hunk, 'Git reset hunk', },
-    ['<Leader>hp'] = { gitsigns.preview_hunk, 'Git preview hunk', },
-    ['<Leader>hu'] = { gitsigns.undo_stage_hunk, 'Git undo stage hunk', },
-    ['<Leader>hR'] = { gitsigns.reset_buffer, 'Git reset buffer', },
-    ['<Leader>hS'] = { gitsigns.stage_buffer, 'Git stage buffer', },
-    ['<Leader>hd'] = { gitsigns.diffthis, 'Git diff .', },
-    ['<Leader>hD'] = { function() gitsigns.diffthis('~') end, 'Git diff ~', },
-    ['<Leader>hb'] = { gitsigns.blame_line, 'Git blame line', },
-    ['<Leader>hB'] = { function() gitsigns.blame_line({ full = true }) end, 'Git blame line full', },
-    ['<Leader>td'] = { gitsigns.toggle_deleted, 'Toggle Git deleted', },
-    ['<Leader>tb'] = { gitsigns.toggle_current_line_blame, 'Toggle Git blame', },
+    ['<Leader>hs'] = { gitsigns.stage_hunk, 'Git stage hunk' },
+    ['<Leader>hr'] = { gitsigns.reset_hunk, 'Git reset hunk' },
+    ['<Leader>hp'] = { gitsigns.preview_hunk, 'Git preview hunk' },
+    ['<Leader>hu'] = { gitsigns.undo_stage_hunk, 'Git undo stage hunk' },
+    ['<Leader>hR'] = { gitsigns.reset_buffer, 'Git reset buffer' },
+    ['<Leader>hS'] = { gitsigns.stage_buffer, 'Git stage buffer' },
+    ['<Leader>hd'] = { gitsigns.diffthis, 'Git diff .' },
+    ['<Leader>hD'] = {
+      function()
+        gitsigns.diffthis '~'
+      end,
+      'Git diff ~',
+    },
+    ['<Leader>hb'] = { gitsigns.blame_line, 'Git blame line' },
+    ['<Leader>hB'] = {
+      function()
+        gitsigns.blame_line { full = true }
+      end,
+      'Git blame line full',
+    },
+    ['<Leader>td'] = { gitsigns.toggle_deleted, 'Toggle Git deleted' },
+    ['<Leader>tb'] = { gitsigns.toggle_current_line_blame, 'Toggle Git blame' },
   },
 
   v = {
     ['<Leader>hs'] = {
       function()
-        gitsigns.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') })
+        gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
       end,
       'Git stage hunk',
     },
 
     ['<Leader>hr'] = {
       function()
-        gitsigns.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') })
+        gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
       end,
       'Git reset hunk',
     },
@@ -129,7 +139,7 @@ M.leap = {
       function()
         local target_windows = require('leap.util').get_enterable_windows()
         table.insert(target_windows, vim.fn.win_getid())
-        require('leap').leap({ target_windows = target_windows })
+        require('leap').leap { target_windows = target_windows }
       end,
       'Leap to',
     },

@@ -15,7 +15,7 @@ end
 M.init = function()
   require('swrh.config').load()
 
-  local mappings = require('swrh.mappings')
+  local mappings = require 'swrh.mappings'
   load_mapping(mappings.general)
   load_mapping(mappings.lspconfig)
   load_mapping(mappings.whichkey)
@@ -24,8 +24,8 @@ M.init = function()
   load_mapping(mappings.leap)
 
   -- Restore cursor position
-  vim.api.nvim_create_autocmd({ "BufReadPost" }, {
-    pattern = { "*" },
+  vim.api.nvim_create_autocmd({ 'BufReadPost' }, {
+    pattern = { '*' },
     callback = function()
       vim.api.nvim_exec('silent! normal! g`"zv', false)
     end,
