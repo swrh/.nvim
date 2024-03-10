@@ -29,8 +29,8 @@ M.general = {
     ['<Leader>tp'] = { '<Cmd>set paste!<CR>', 'Toggle paste' },
     ['<Leader>ts'] = { '<Cmd>set spell!<CR>', 'Toggle spell' },
 
-    ['<C-n>'] = { '<Cmd>cnext<CR>', 'QuickList next' },
-    ['<C-p>'] = { '<Cmd>cprevious<CR>', 'QuickList previous' },
+    ['<C-n>'] = { '<Cmd>cnext<CR>zz', 'QuickList next' },
+    ['<C-p>'] = { '<Cmd>cprevious<CR>zz', 'QuickList previous' },
 
     [']f'] = { '<Cmd>next<CR>', 'Next file' },
     ['[f'] = { '<Cmd>previous<CR>', 'Previous file' },
