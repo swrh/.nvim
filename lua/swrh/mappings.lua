@@ -40,6 +40,13 @@ M.general = {
 
     ['<Leader>ww'] = { '<Cmd>wa<CR>', ':wa' },
     ['<Leader>wq'] = { '<Cmd>wqa<CR>', ':wqa' },
+
+    ['<Leader>xga'] = { '<Cmd>!git add %<CR>', 'git add' },
+    ['<Leader>xgc'] = { '<Cmd>!git commit -m % %<CR>', 'git commit' },
+    ['<Leader>xjq'] = { '<Cmd>w !jq .<CR>', 'jq .' },
+    ['<Leader>xpbc'] = { '<Cmd>w !pbcopy<CR>', 'pbcopy' },
+    ['<Leader>xpbp'] = { '<Cmd>%!pbpaste<CR>', 'pbpaste' },
+    ['<Leader>xx'] = { '<Cmd>!chmod +x %<CR>', 'chmod +x' },
   },
 
   t = {
