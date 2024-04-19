@@ -46,6 +46,8 @@ M.general = {
     ['<Leader>xjq'] = { '<Cmd>w !jq .<CR>', 'jq .' },
     ['<Leader>xpbc'] = { '<Cmd>w !pbcopy<CR>', 'pbcopy' },
     ['<Leader>xpbp'] = { '<Cmd>%!pbpaste<CR>', 'pbpaste' },
+    ['<Leader>xs'] = { '<Cmd>%!sort<CR>gv', 'sort' },
+    ['<Leader>xu'] = { '<Cmd>%!uniq<CR>gv', 'uniq' },
     ['<Leader>xx'] = { '<Cmd>!chmod +x %<CR>', 'chmod +x' },
   },
 
