@@ -44,8 +44,6 @@ M.general = {
     ['<Leader>xga'] = { '<Cmd>!git add %<CR>', 'git add' },
     ['<Leader>xgc'] = { '<Cmd>!git commit -m % %<CR>', 'git commit' },
     ['<Leader>xjq'] = { '<Cmd>w !jq .<CR>', 'jq .' },
-    ['<Leader>xc'] = { '<Cmd>w !pbcopy<CR>', 'pbcopy' },
-    ['<Leader>xp'] = { '<Cmd>%!pbpaste<CR>', 'pbpaste' },
     ['<Leader>xs'] = { '<Cmd>%!sort<CR>gv', 'sort' },
     ['<Leader>xu'] = { '<Cmd>%!uniq<CR>gv', 'uniq' },
     ['<Leader>xx'] = { '<Cmd>!chmod +x %<CR>', 'chmod +x' },
@@ -59,7 +57,6 @@ M.general = {
     ['<M-k>'] = { ":move '<-2<CR>gv=gv", 'Move line up' },
     ['<M-j>'] = { ":move '>+1<CR>gv=gv", 'Move line down' },
 
-    ['<Leader>xc'] = { ':w !pbcopy<CR>', 'pbcopy' },
     ['<Leader>xs'] = { '!sort<CR>gv', 'sort' },
     ['<Leader>xu'] = { '!uniq<CR>gv', 'uniq' },
   },
