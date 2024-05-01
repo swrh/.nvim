@@ -16,8 +16,8 @@ M.general = {
     ['<C-j>'] = { '<C-w>j', 'Window down' },
     ['<C-k>'] = { '<C-w>k', 'Window up' },
 
-    ['<C-\\>'] = { '<Cmd>split<CR>', 'Split window horizontally' },
-    ['<C-|>'] = { '<Cmd>vsplit<CR>', 'Split window vertically' },
+    ['<bslash>'] = { '<Cmd>split<CR>', 'Split window horizontally' },
+    ['<bar>'] = { '<Cmd>vsplit<CR>', 'Split window vertically' },
 
     ['<C-_>'] = { '<C-w>-', 'Decrease current window height' },
     ['<C-=>'] = { '<C-w>+', 'Increase current window height' },
