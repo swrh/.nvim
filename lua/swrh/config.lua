@@ -22,8 +22,7 @@ M.load = function()
 
   vim.o.autowrite = true
 
-  vim.o.list = true
-  vim.o.listchars = 'tab:>.,trail:.,eol:$'
+  vim.o.list = false
 
   vim.o.ignorecase = false
 end
