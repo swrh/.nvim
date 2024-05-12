@@ -25,6 +25,8 @@ M.load = function()
   vim.o.list = false
 
   vim.o.ignorecase = false
+
+  vim.o.scrolloff = 0
 end
 
 return M
