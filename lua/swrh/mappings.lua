@@ -48,6 +48,8 @@ M.general = {
     ['<Leader>xs'] = { '<Cmd>%!sort<CR>gv', 'sort' },
     ['<Leader>xu'] = { '<Cmd>%!uniq<CR>gv', 'uniq' },
     ['<Leader>xx'] = { '<Cmd>!chmod +x %<CR>', 'chmod +x' },
+
+    ['<Leader>u'] = { '<Cmd>UndotreeToggle<CR>', 'Undotree' },
   },
 
   t = {
