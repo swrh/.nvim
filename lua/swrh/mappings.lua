@@ -129,15 +129,17 @@ M.telescope = {
   n = {
     ['<Leader>fa'] = { '<Cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>', 'Find all' },
     ['<Leader>fb'] = { '<Cmd>Telescope buffers<CR>', 'Find buffers' },
+    ['<Leader>fd'] = { '<Cmd>Telescope diagnostics<CR>', 'Find diagnostics' },
     ['<Leader>ff'] = { '<Cmd>Telescope find_files<CR>', 'Find files' },
     ['<Leader>fg'] = { '<Cmd>Telescope git_files<CR>', 'Git files' },
     ['<Leader>fh'] = { '<Cmd>Telescope help_tags<CR>', 'Help page' },
     ['<Leader>fk'] = { '<Cmd>Telescope marks<CR>', 'Find bookmarks' },
     ['<Leader>fo'] = { '<Cmd>Telescope oldfiles<CR>', 'Find oldfiles' },
     ['<Leader>fr'] = { '<Cmd>Telescope resume<CR>', 'Resume (find)' },
-    ['<Leader>fw'] = { '<Cmd>Telescope grep_string<CR>', 'Find currrent word' },
     ['<Leader>fs'] = { '<Cmd>Telescope live_grep<CR>', 'Live grep' },
+    ['<Leader>fw'] = { '<Cmd>Telescope grep_string<CR>', 'Find currrent word' },
     ['<Leader>fz'] = { '<Cmd>Telescope current_buffer_fuzzy_find<CR>', 'Find in current buffer' },
+    ['<leader>f/'] = { '<Cmd>Telescope live_grep grep_open_files=true prompt_title=Live\\ Grep\\ in\\ Open\\ Files<CR>', 'Find in open files', },
 
     ['<Leader>gc'] = { '<Cmd>Telescope git_commits<CR>', 'Git commits' },
     ['<Leader>gs'] = { '<Cmd>Telescope git_status<CR>', 'Git status' },
