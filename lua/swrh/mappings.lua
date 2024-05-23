@@ -28,6 +28,7 @@ M.general = {
     ['<Leader>tl'] = { '<Cmd>set list!<CR>', 'Toggle list' },
     ['<Leader>tp'] = { '<Cmd>set paste!<CR>', 'Toggle paste' },
     ['<Leader>ts'] = { '<Cmd>set spell!<CR>', 'Toggle spell' },
+    ['<Leader>tu'] = { '<Cmd>UndotreeToggle<CR>', 'Undotree' },
 
     ['<C-n>'] = { '<Cmd>cnext<CR>zz', 'QuickList next' },
     ['<C-p>'] = { '<Cmd>cprevious<CR>zz', 'QuickList previous' },
@@ -48,8 +49,6 @@ M.general = {
     ['<Leader>xs'] = { '<Cmd>%!sort<CR>gv', 'sort' },
     ['<Leader>xu'] = { '<Cmd>%!uniq<CR>gv', 'uniq' },
     ['<Leader>xx'] = { '<Cmd>!chmod +x %<CR>', 'chmod +x' },
-
-    ['<Leader>u'] = { '<Cmd>UndotreeToggle<CR>', 'Undotree' },
   },
 
   t = {
