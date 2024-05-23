@@ -13,7 +13,9 @@ local load_mapping = function(section)
 end
 
 M.init = function()
-  require('swrh.config').load()
+  local config = require 'swrh.config'
+  config.load()
+  config.setup_telescope()
 
   local mappings = require 'swrh.mappings'
   load_mapping(mappings.general)

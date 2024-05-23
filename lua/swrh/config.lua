@@ -29,4 +29,16 @@ M.load = function()
   vim.o.scrolloff = 0
 end
 
+M.setup_telescope = function()
+  require('telescope').setup {
+    defaults = {
+      layout_strategy = 'flex',
+      layout_config = {
+        prompt_position = 'top',
+      },
+      sorting_strategy = 'ascending',
+    },
+  }
+end
+
 return M
