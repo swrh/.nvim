@@ -134,6 +134,7 @@ M.telescope = {
     ['<Leader>fg'] = { '<Cmd>Telescope git_files<CR>', 'Git files' },
     ['<Leader>fh'] = { '<Cmd>Telescope help_tags<CR>', 'Help page' },
     ['<Leader>fk'] = { '<Cmd>Telescope marks<CR>', 'Find bookmarks' },
+    ['<Leader>fn'] = { function() require('telescope.builtin').find_files { cwd = vim.fn.stdpath 'config', } end, 'Neovim files', },
     ['<Leader>fo'] = { '<Cmd>Telescope oldfiles<CR>', 'Find oldfiles' },
     ['<Leader>fr'] = { '<Cmd>Telescope resume<CR>', 'Resume (find)' },
     ['<Leader>fs'] = { '<Cmd>Telescope live_grep<CR>', 'Live grep' },
