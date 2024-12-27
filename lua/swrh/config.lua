@@ -27,6 +27,10 @@ M.load = function()
   vim.o.ignorecase = false
 
   vim.o.scrolloff = 0
+
+  vim.cmd([[
+    iabbrev _VERSION <c-r>=strftime("%Y-%m-%d")<cr>
+  ]])
 end
 
 M.setup_telescope = function()
