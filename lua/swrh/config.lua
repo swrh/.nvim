@@ -3,7 +3,11 @@ local M = {}
 M.load = function()
   vim.o.hlsearch = true
 
-  vim.o.clipboard = ''
+  -- Do not sync clipboard between OS and Neovim.
+  --  Schedule the setting because that's how Kickstart.nvim does it.
+  vim.schedule(function()
+    vim.o.clipboard = ''
+  end)
 
   vim.o.smartindent = true
 
