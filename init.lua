@@ -982,6 +982,7 @@ require('lazy').setup({
   require 'swrh.plugins.mergetool',
   require 'swrh.plugins.copilot',
   require 'swrh.plugins.undotree',
+  require 'swrh.plugins.iron',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
